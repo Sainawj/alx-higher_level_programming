@@ -3,6 +3,7 @@ import sys
 if __name__ == "__main__":
     argc = len(sys.argv) - 1
     result = 0
-    for i, arg in enumerate(sys.argv[1:], 1):
-        result += int(arg)
+    for arg in sys.argv:
+        if arg != sys.argv[0]:
+            result += int(arg)
         print(result)
