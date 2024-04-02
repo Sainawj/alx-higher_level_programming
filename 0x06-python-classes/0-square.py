@@ -2,5 +2,5 @@
 """ Defination of Square class"""
 
 class Square:
-    """Class body"""
+    """Square Class body"""
     pass
