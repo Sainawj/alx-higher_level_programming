@@ -1,19 +1,13 @@
+#!/usr/bin/python3
+"""Define  class Square."""
+
+
 class Square:
+    """Represent a square."""
+
     def __init__(self, size):
-        self.size = size
-
-    def set_size(self, new_size):
-        """Set the size of the square."""
-        self.size = new_size
-
-    def get_size(self):
-        """Get the size of the square."""
-        return self.size
-
-    def area(self):
-        """Calculate the area of the square."""
-        return self.size ** 2
-
-    def perimeter(self):
-        """Calculate the perimeter of the square."""
-        return 4 * self.size
+        """Initiate  new Square.
+        Args:
+            size (int): size of the new square.
+        """
+        self.__size = size
