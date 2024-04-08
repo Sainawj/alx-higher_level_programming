@@ -1,0 +1,67 @@
+import unittest
+from importlib import import_module
+
+class TestAddInteger(unittest.TestCase):
+    def test_integer_addition(self):
+        add_integer = import_module('0-add_integer').add_integer
+
+        # Test integer addition
+        self.assertEqual(add_integer(2, 3), 5)
+        self.assertEqual(add_integer(2, -3), -1)
+
+    def test_float_addition(self):
+        add_integer = import_module('0-add_integer').add_integer
+
+        # Test float addition
+        self.assertEqual(add_integer(2.0, 3.0), 5)
+        self.assertEqual(add_integer(2.9, 0.2), 2)
+        self.assertEqual(add_integer(-2.9, -0.2), -2)
+
+    def test_mixed_addition(self):
+        add_integer = import_module('0-add_integer').add_integer
+
+        # Test mixed addition
+        self.assertEqual(add_integer(2.3, -3), -1)
+
+    def test_default_value(self):
+        add_integer = import_module('0-add_integer').add_integer
+
+        # Test default value
+        self.assertEqual(add_integer(2), 100)
+
+    def test_non_numbers(self):
+        add_integer = import_module('0-add_integer').add_integer
+
+        # Test non-number arguments
+        with self.assertRaises(TypeError):
+            add_integer("hello", 3)
+        with self.assertRaises(TypeError):
+            add_integer(2, "hello")
+        with self.assertRaises(TypeError):
+            add_integer(None)
+        with self.assertRaises(TypeError):
+            add_integer(2.3, None)
+        with self.assertRaises(TypeError):
+            add_integer("hello", "there")
+
+    def test_overflow(self):
+        add_integer = import_module('0-add_integer').add_integer
+
+        # Test overflow
+        with self.assertRaises(OverflowError):
+            add_integer(float('inf'))
+        with self.assertRaises(OverflowError):
+            add_integer(2, float('inf'))
+
+    def test_nan(self):
+        add_integer = import_module('0-add_integer').add_integer
+
+        # Test NaN
+        with self.assertRaises(ValueError):
+            add_integer(float('nan'))
+        with self.assertRaises(ValueError):
+            add_integer(2, float('nan'))
+
+if __name__ == '__main__':
+    unittest.main()
+
