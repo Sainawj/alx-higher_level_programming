@@ -12,8 +12,22 @@ class Rectangle:
             width (int): The width of the new rectangle.
             height (int): The height of the new rectangle.
         """
+        self.__width = 0
+        self.__height = 0
         self.width = width
         self.height = height
+
+    def __str__(self):
+        """Return string representation of Rectangle."""
+        return f"Rectangle(width={self.width}, height={self.height})"
+
+    def area(self):
+        """Calculate the area of the Rectangle."""
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """Calculate the perimeter of the Rectangle."""
+        return 2 * (self.__width + self.__height)
 
     @property
     def width(self):
@@ -40,3 +54,4 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
