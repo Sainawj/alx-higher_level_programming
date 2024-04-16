@@ -14,4 +14,4 @@ def write_file(filename="", text=""):
             return num_chars_written
     except Exception as e:
         print(f"Error occurred: {e}")
-        return (0)
+        return 0
