@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def write_file(filename="", text=""):
     '''Writes a string to a text file (UTF8) and returns the number of characters written.
 
@@ -10,8 +12,8 @@ def write_file(filename="", text=""):
     '''
     try:
         with open(filename, 'w', encoding='utf-8') as file:
-            num_chars_written = file.write(text)
-            return num_chars_written
+            file.write(text)
+            return len(text)
     except Exception as e:
         print(f"Error occurred: {e}")
         return 0
