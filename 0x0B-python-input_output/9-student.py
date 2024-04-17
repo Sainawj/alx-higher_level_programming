@@ -16,7 +16,6 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-
     def to_json(self):
         """Retrieve a dictionary representation of a Student instance.
 
@@ -28,7 +27,6 @@ class Student:
             'last_name': self.last_name,
             'age': self.age
         }
-
 
     def reload_from_json(self, json_data):
         """Reload a Student instance from a dictionary representation.
