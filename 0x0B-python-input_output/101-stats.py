@@ -32,9 +32,9 @@ def main():
                 print_statistics(total_size, status_codes)
 
 
-except KeyboardInterrupt:
-    print_statistics(total_size, status_codes)
-    raise
+    except KeyboardInterrupt:
+        print_statistics(total_size, status_codes)
+        raise
 
 if __name__ == "__main__":
     main()
