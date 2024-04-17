@@ -1,14 +1,21 @@
 #!/usr/bin/python3
+"""script that reads stdin line by line and computes metrics"""
 import sys
 
 
 def print_statistics(total_size, status_codes):
+    """
+    Print the total file size and number of lines by status code.
+    """
     print("File size: {}".format(total_size))
     for code, count in sorted(status_codes.items()):
         print("{}: {}".format(code, count))
 
 
 def main():
+    """
+    Main function to read stdin and compute metrics.
+    """
     total_size = 0
     status_codes = {'200': 0, '301': 0, '400': 0, '401': 0,
                     '403': 0, '404': 0, '405': 0, '500': 0}
