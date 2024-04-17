@@ -20,6 +20,7 @@ def save_to_json_file(my_obj, filename):
     with open(filename, 'w') as file:
         json.dump(my_obj, file)
 
+
 def load_from_json_file(filename):
     """Creates an object from a JSON file.
 
@@ -32,8 +33,10 @@ def load_from_json_file(filename):
     with open(filename, 'r') as file:
         return json.load(file)
 
+
 filename = "add_item.json"
 json_list = []
+
 
 if os.path.exists(filename):
     json_list = load_from_json_file(filename)
