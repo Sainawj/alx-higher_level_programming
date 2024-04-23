@@ -2,6 +2,7 @@
 
 """Defines unittests for models/square.py."""
 
+
 import io
 import sys
 import unittest
@@ -9,12 +10,8 @@ from models.base import Base
 from models.square import Square
 
 
-import unittest
-from models.square import Square
-
-
-class TestSquareUpdateKwargs(unittest.TestCase):
-    """Tests the update method of the Square class with keyword arguments."""
+class TestSquare_update_kwargs(unittest.TestCase):
+    """Unittests for testing update kwargs method of Square class."""
 
     def test_update_kwargs_one(self):
         s = Square(10, 10, 10, 10)
@@ -66,37 +63,37 @@ class TestSquareUpdateKwargs(unittest.TestCase):
 
     def test_update_kwargs_invalid_size(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
             s.update(size="invalid")
 
     def test_update_kwargs_size_zero(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             s.update(size=0)
 
     def test_update_kwargs_size_negative(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             s.update(size=-3)
 
     def test_update_kwargs_invalid_x(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
             s.update(x="invalid")
 
     def test_update_kwargs_x_negative(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             s.update(x=-5)
 
     def test_update_kwargs_invalid_y(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaises(TypeError):
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
             s.update(y="invalid")
 
     def test_update_kwargs_y_negative(self):
         s = Square(10, 10, 10, 10)
-        with self.assertRaises(ValueError):
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             s.update(y=-5)
 
     def test_update_args_and_kwargs(self):
