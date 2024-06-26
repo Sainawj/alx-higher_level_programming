@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script that retrieves and prints the first State object from a MySQL database using SQLAlchemy.
+Script that retrieves and prints the first State object from a
+MySQL database using SQLAlchemy.
 """
 
 from model_state import Base, State
