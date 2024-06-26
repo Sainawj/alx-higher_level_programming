@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script that retrieves and lists all State objects from a MySQL database using SQLAlchemy.
+Script that retrieves and lists all State objects from db
+using SQLAlchemy.
 """
 from model_state import Base, State
 from sys import argv

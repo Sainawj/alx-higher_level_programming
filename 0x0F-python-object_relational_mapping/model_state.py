@@ -8,10 +8,14 @@ The State class maps to a database table 'states' with attributes:
 
 Requires SQLAlchemy library for ORM functionality.
 """
+
+
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
+
 Base = declarative_base()
+
 
 class State(Base):
     """
