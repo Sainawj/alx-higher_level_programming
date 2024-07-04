@@ -17,7 +17,7 @@
 
 
 def find_peak(list_of_integers):
-    """A brute-force implementation to find a peak in the list.
+    """BRUTE force implementation for question
     """
     max_i = None
     for ele in list_of_integers:
