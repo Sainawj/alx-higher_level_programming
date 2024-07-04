@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""Python script to find a peak in an unsorted list of integers, designed for interview preparation.
+"""Python script to find a peak in an unsorted list of integers,
 """
 
 """
     THOUGHT PROCESS
         Since the list is unsorted, sorting it would require O(n log n) time,
             which is not efficient for this task.
-        Iterating through the list and keeping track of the maximum value (brute force approach)
+        Iterating through the list and keeping track of the maximum
+        value (brute force approach)
             results in a time complexity of O(n).
 
         Another approach involves iterating from both ends towards the middle,
