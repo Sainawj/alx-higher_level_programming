@@ -1,0 +1,76 @@
+What Happens When You Type Google.com In Your Browser And Press Enter
+
+Introduction
+
+When you type "google.com" and press Enter, a complex process unfolds. This common interview question tests your grasp of web architecture. Interviewers might focus on DNS, load balancing, or other elements, depending on the role. Understanding these fundamentals is key to impressing potential employers.
+
+URL Components
+
+A URL includes:
+
+Protocol: Communication method (HTTP/HTTPS).
+Domain Name: Identifies the site (e.g., 'example.com').
+Port: Optional server port number (default is 80 for HTTP).
+Path: Resource location on the site.
+Query Parameters: Optional data for the server.
+Domain names break down into:
+
+Subdomain: Optional prefix (e.g., "blog" in "blog.example.com").
+2nd Level Domain: Core part (e.g., "example" in "example.com").
+Top-Level Domain (TLD): Indicates type (e.g., ".com").
+Hidden Dot: Indicates the root of the domain hierarchy.
+DNS Resolution
+
+When you enter a URL, the browser resolves the domain name to an IP address:
+
+Browser Cache: Checks if the IP is cached.
+OS Cache: Searches the OS cache if not found.
+ISP Cache: Queries the ISP's cache if still not found.
+Root Server: Requests the IP from a root server if necessary.
+TLD Server: Directs to the appropriate TLD server.
+Authoritative Name Servers: Provides the IP address.
+TCP/IP Connection
+
+With the IP address, the browser establishes a TCP/IP connection using:
+
+IP: For addressing and routing.
+TCP: For reliable data transfer.
+HTTPS/SSL
+
+HTTPS secures data using SSL/TLS by:
+
+Handshake: Negotiating encryption.
+Key Exchange: Sharing cryptographic keys.
+Encryption: Securing data during transfer.
+Authentication: Verifying the server’s identity.
+Load Balancer
+
+Load balancers distribute traffic across servers to ensure performance and reliability, handling high traffic and server failures.
+
+Firewall
+
+Firewalls protect networks by monitoring traffic and enforcing security rules to prevent unauthorized access and threats.
+
+Web Server
+
+The web server processes requests, retrieves content, and sends responses to the browser. It may use caching and CDNs for efficiency.
+
+Application Server
+
+Application servers handle dynamic content and business logic, interacting with databases and other services.
+
+Database
+
+Databases manage and retrieve data essential for web applications, ensuring performance and scalability.
+
+Overview
+
+Typing "google.com" initiates a multi-step process involving DNS resolution, load balancing, firewall checks, and interactions with web and application servers and databases. This ensures a fast, secure, and reliable browsing experience, highlighting the complexity and sophistication of web architecture.
+
+
+
+
+
+
+
+
