@@ -1,0 +1,73 @@
+What Happens When You Type "google.com" and Press Enter?
+The "g" key is pressed:
+
+Browser auto-completes URL suggestions based on history and cookies.
+The "enter" key bottoms out:
+
+Keycode 13 (Enter) is generated and sent to the computer via USB or Bluetooth.
+Interrupt fires (NOT for USB keyboards):
+
+Keyboard signals an interrupt request, processed by the CPU through the Interrupt Descriptor Table (IDT).
+(On Windows) A WM_KEYDOWN message is sent to the app:
+
+Windows sends a WM_KEYDOWN message to the active window for processing.
+(On OS X) A KeyDown NSEvent is sent to the app:
+
+OS X sends a KeyDown event to the application through the WindowServer.
+(On GNU/Linux) the Xorg server listens for keycodes:
+
+Xorg server processes keycodes and sends the input to the focused window.
+Parse URL:
+
+Browser parses "google.com" as a URL.
+Is it a URL or a search term?:
+
+Browser identifies it as a URL, not a search term.
+Convert non-ASCII Unicode characters in the hostname:
+
+No conversion needed for "google.com" as it uses ASCII characters.
+Check HSTS list:
+
+Browser checks if "google.com" requires HTTPS and enforces it if needed.
+DNS lookup:
+
+Browser resolves "google.com" to an IP address using DNS.
+ARP process:
+
+ARP resolves the IP address to a MAC address for local network communication.
+Opening of a socket:
+
+Browser opens a TCP socket to the server's IP address on port 80 (HTTP) or 443 (HTTPS).
+TLS handshake:
+
+Secure connection is established via TLS, negotiating encryption parameters and symmetric key.
+If a packet is dropped:
+
+TCP congestion control algorithms handle packet loss and retransmit if necessary.
+HTTP protocol:
+
+Browser sends an HTTP request to retrieve the web page.
+HTTP Server Request Handle:
+
+Server processes the request, retrieves content, and sends back an HTTP response.
+Behind the scenes of the Browser:
+
+Browser renders HTML, CSS, and executes JavaScript to display the page.
+HTML parsing:
+
+Browser parses HTML into a DOM tree, representing the structure of the web page.
+CSS interpretation:
+
+CSS is parsed and applied to HTML elements to style the page.
+Page Rendering:
+
+The browser constructs and paints the layout based on the DOM and CSS.
+GPU Rendering:
+
+Rendering tasks are offloaded to the GPU for efficient graphics processing.
+Window Server:
+
+Manages and draws the window content, interacting with the browser.
+Post-rendering and user-induced execution:
+
+The browser executes any deferred JavaScript and handles user interactions.
