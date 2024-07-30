@@ -31,7 +31,8 @@ function printMovieCharacters(movieId) {
 
   // Get data from the movie URL
   getDataFrom(movieUri)
-    .then(JSON.parse, errHandler)  // Parse the response body as JSON
+    // Parse the response body as JSON
+	.then(JSON.parse, errHandler)
     .then(function (res) {
       // Extract the characters array from the response
       const characters = res.characters;
@@ -45,7 +46,8 @@ function printMovieCharacters(movieId) {
       // Wait for all character data requests to complete
       Promise.all(promises)
         .then((results) => {
-          // Loop through each result and print the character's name
+          // Loop through each result and print
+		// the character's name
           for (let i = 0; i < results.length; ++i) {
             console.log(JSON.parse(results[i]).name);
           }
@@ -57,5 +59,6 @@ function printMovieCharacters(movieId) {
     });
 }
 
-// Call the function to print movie characters using the movie ID passed as a command-line argument
+// Call the function to print movie characters using the
+// movie ID passed as a command-line argument
 printMovieCharacters(process.argv[2]);
